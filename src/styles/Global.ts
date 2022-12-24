@@ -1,11 +1,6 @@
 import { globalCss, theme } from '../../stitches.config'
 
 export const globalStyles = globalCss({
-  '@font-face': {
-    fontFamily: 'Monument Extended',
-    src: 'url("/fonts/Monument-Extended.otf")'
-  },
-
   '*': {
     margin: 0,
     padding: 0,
@@ -48,6 +43,10 @@ export const globalStyles = globalCss({
     fontFamily: '$default'
   },
 
+  li: {
+    listStyle: 'none'
+  },
+
   a: {
     color: 'inherit',
     textDecoration: 'none'
@@ -62,6 +61,12 @@ export const globalStyles = globalCss({
   '@bp2': {
     html: {
       fontSize: '87.5%'
+    }
+  },
+
+  '@bp3': {
+    'a, button, div': {
+      cursor: 'default !important'
     }
   }
 })
