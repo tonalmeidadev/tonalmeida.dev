@@ -2,9 +2,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Compass } from 'phosphor-react'
 
+import { HomeProps } from '../../pages'
 import { ReadmeContainer, Profile, Photo, Resume } from './Styled'
 
-export function Readme() {
+export function Readme({ home }: HomeProps) {
   return (
     <ReadmeContainer>
       <Profile>
@@ -18,18 +19,15 @@ export function Readme() {
             priority
           />
         </Photo>
-        <h1>Ton Almeida</h1>
-        <h2>Front-end & Creative Developer</h2>
+        <h1>{home.name}</h1>
+        <h2>{home.position}</h2>
         <span>
           Pressione <strong>Ctrl + K</strong> ou <strong>Command + K</strong>
         </span>
       </Profile>
 
       <Resume>
-        <p>
-          Um Desenvolvedor Front-End criativo, aspirante a designer de UX que
-          constrói produtos digitais e vive em São Paulo.
-        </p>
+        <p>{home.minibiography}</p>
         <Link
           href="https://goo.gl/maps/U8mehYfFZdSgxF1W8"
           target="_blank"
@@ -38,11 +36,7 @@ export function Readme() {
           title="Localização em Sacomã, São Paulo"
         >
           <Compass size={22} />
-          <span>
-            23° 36&lsquo; 53.135&quot; S,
-            <br />
-            46° 35&rsquo; 44.957&quot; W
-          </span>
+          <div dangerouslySetInnerHTML={{ __html: home.localization.html }} />
         </Link>
       </Resume>
     </ReadmeContainer>

@@ -90,7 +90,7 @@ export const Resume = styled('section', {
   gap: '1.125rem',
   marginLeft: 'auto',
 
-  p: {
+  '> p': {
     fontSize: 14,
     fontWeight: 200,
     lineHeight: '180%'
@@ -107,12 +107,14 @@ export const Resume = styled('section', {
       animation: `${compassMovement} 2s alternate infinite`
     },
 
-    span: {
-      fontSize: 10,
-      fontWeight: 300,
-      letterSpacing: 1,
-      fontFamily: theme.fonts.custom,
-      textTransform: 'uppercase'
+    div: {
+      p: {
+        fontSize: 10,
+        fontWeight: 300,
+        letterSpacing: 1,
+        fontFamily: theme.fonts.custom,
+        textTransform: 'uppercase'
+      }
     },
 
     '&:hover span': {
@@ -125,9 +127,11 @@ export const Resume = styled('section', {
     gap: '2rem',
 
     a: {
-      span: {
-        br: {
-          display: 'none'
+      div: {
+        p: {
+          br: {
+            display: 'none'
+          }
         }
       }
     }

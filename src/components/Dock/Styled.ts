@@ -11,7 +11,8 @@ export const DockContainer = styled('div', {
   gap: 10,
 
   '@bp4': {
-    gap: 0
+    gap: 0,
+    bottom: '1.5rem'
   }
 })
 

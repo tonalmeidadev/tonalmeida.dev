@@ -1,12 +1,15 @@
 import { DefaultSeoProps } from 'next-seo'
 
 const SEO: DefaultSeoProps = {
-  canonical: 'https://www.tonalmeida.dev',
   openGraph: {
     type: 'website',
-    locale: 'pt_BR',
-    url: 'https://www.tonalmeida.dev/',
+    locale: 'pt-BR',
     siteName: 'Ton Almeida — Front-End Developer'
+  },
+  twitter: {
+    handle: '@handle',
+    site: '@site',
+    cardType: 'summary_large_image'
   }
 }
 
