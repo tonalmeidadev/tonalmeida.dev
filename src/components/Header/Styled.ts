@@ -41,10 +41,18 @@ export const HeaderContainer = styled('header', {
       position: 'relative',
 
       span: {
-        letterSpacing: 1,
-        fontFamily: theme.fonts.custom,
+        fontSize: 10,
         fontWeight: 400,
-        fontSize: 10
+        letterSpacing: 1,
+        color: theme.colors.silver,
+        fontFamily: theme.fonts.custom,
+        transition: 'color 150ms ease-in-out'
+      },
+
+      '&:hover': {
+        span: {
+          color: theme.colors.white
+        }
       }
     }
   },

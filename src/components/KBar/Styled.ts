@@ -65,7 +65,8 @@ export const KBarSearch = styled(Search, {
     fontSize: 14,
     fontWeight: 400,
     lineHeight: '180%',
-    color: theme.colors.gray
+    color: theme.colors.gray,
+    fontFamily: theme.fonts.default
   },
 
   '@bp3': {

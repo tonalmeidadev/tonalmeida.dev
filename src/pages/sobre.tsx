@@ -1,23 +1,29 @@
 import { GetStaticProps } from 'next'
 
+import { About } from '../components/About/About'
 import { Dock } from '../components/Dock/Dock'
+import { Footer } from '../components/Footer/Footer'
 import { Grid } from '../components/Grid/Grid'
 import { Header } from '../components/Header/Header'
-import { Readme } from '../components/Readme/Readme'
 import { SEO } from '../components/SEO/SEO'
-import { GET_HOME_PAGE } from '../graphql/queries'
+import { GET_ABOUT_PAGE } from '../graphql/queries'
 import { client } from '../lib/apollo-client'
 
-export type HomeProps = {
-  home: {
+export type AboutProps = {
+  about: {
     slug: string
     title: string
     description: string
     name: string
     position: string
-    minibiography: string
+    biography: {
+      html: string
+    }
     localization: {
       html: string
+    }
+    resume: {
+      url: string
     }
     ogimage: {
       url: string
@@ -25,17 +31,19 @@ export type HomeProps = {
   }
 }
 
-export default function Home({ home }: HomeProps) {
+export default function Sobre({ about }: AboutProps) {
   return (
     <>
       <SEO
-        title={home.title}
-        image={home.ogimage.url}
-        description={home.description}
+        titleSufix
+        title={about.title}
+        image={about.ogimage.url}
+        description={about.description}
       />
       <Grid>
         <Header />
-        <Readme home={home} />
+        <About about={about} />
+        <Footer />
         <Dock />
       </Grid>
     </>
@@ -44,13 +52,13 @@ export default function Home({ home }: HomeProps) {
 
 export const getStaticProps: GetStaticProps = async () => {
   const { data } = await client.query({
-    query: GET_HOME_PAGE
+    query: GET_ABOUT_PAGE
   })
-  const home = data.page
+  const about = data.page
 
   return {
     props: {
-      home
+      about
     },
     revalidate: 60 * 60 * 12 // 12 hours
   }

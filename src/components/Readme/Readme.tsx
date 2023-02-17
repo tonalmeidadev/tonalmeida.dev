@@ -1,8 +1,7 @@
 import Image from 'next/image'
-import Link from 'next/link'
-import { Compass } from 'phosphor-react'
 
 import { HomeProps } from '../../pages'
+import { Address } from '../Address/Address'
 import { ReadmeContainer, Profile, Photo, Resume } from './Styled'
 
 export function Readme({ home }: HomeProps) {
@@ -28,16 +27,7 @@ export function Readme({ home }: HomeProps) {
 
       <Resume>
         <p>{home.minibiography}</p>
-        <Link
-          href="https://goo.gl/maps/U8mehYfFZdSgxF1W8"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Link para acesso a localização no mapa"
-          title="Localização em Sacomã, São Paulo"
-        >
-          <Compass size={22} />
-          <div dangerouslySetInnerHTML={{ __html: home.localization.html }} />
-        </Link>
+        <Address localization={home.localization.html} />
       </Resume>
     </ReadmeContainer>
   )

@@ -4,9 +4,8 @@ import {
   AppWindow,
   Copy,
   Gear,
-  GithubLogo,
   MagnifyingGlass,
-  ShareNetwork,
+  Shuffle,
   User
 } from 'phosphor-react'
 import { toast } from 'react-hot-toast'
@@ -39,7 +38,7 @@ export function KBar({ children }: KBarProps) {
       name: 'Copiar link atual',
       shortcut: ['c'],
       keywords: 'copiar-url',
-      section: 'Geral',
+      section: 'Outros',
       perform: () => {
         navigator.clipboard.writeText(window.location.href)
         toast('Link atual copiado!')
@@ -72,25 +71,6 @@ export function KBar({ children }: KBarProps) {
       section: 'Ir para',
       perform: () => router.push('/setup'),
       icon: <Gear size={20} />
-    },
-    {
-      id: 'github',
-      name: 'GitHub',
-      shortcut: ['g', 'h'],
-      keywords: 'ir-github',
-      section: 'Redes Sociais',
-      perform: () =>
-        window.open('https://www.github.com/otonalmeidas', '_blank'),
-      icon: <GithubLogo size={20} />
-    },
-    {
-      id: 'others',
-      name: 'Outras',
-      shortcut: ['o', 't'],
-      keywords: 'ir-outros',
-      section: 'Redes Sociais',
-      perform: () => router.push('/about#social'),
-      icon: <ShareNetwork size={20} />
     }
   ]
 

@@ -18,3 +18,27 @@ export const GET_HOME_PAGE = gql`
     }
   }
 `
+
+export const GET_ABOUT_PAGE = gql`
+  query GET_ABOUT_PAGE {
+    page(where: { slug: "about" }) {
+      slug
+      title
+      description
+      name
+      position
+      biography {
+        html
+      }
+      localization {
+        html
+      }
+      resume {
+        url
+      }
+      ogimage {
+        url
+      }
+    }
+  }
+`
