@@ -42,3 +42,44 @@ export const GET_ABOUT_PAGE = gql`
     }
   }
 `
+
+export const GET_WORKS = gql`
+  query GET_WORKS {
+    works {
+      id
+      date
+      title
+      online
+      link
+      image {
+        url
+      }
+    }
+  }
+`
+
+export const GET_COLLABORATES = gql`
+  query GET_COLLABORATES {
+    collaborates {
+      id
+      date
+      title
+      online
+      link
+      image {
+        url
+      }
+    }
+  }
+`
+
+export const GET_SERVICES = gql`
+  query GET_SERVICES {
+    services {
+      id
+      tag
+      title
+      description
+    }
+  }
+`

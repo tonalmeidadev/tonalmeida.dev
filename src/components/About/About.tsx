@@ -6,16 +6,17 @@ import {
   LinkedinLogo
 } from 'phosphor-react'
 
-import { AboutProps } from '../../pages/sobre'
+import { AboutPageProps } from '../../pages/sobre'
+import { Accordion } from '../Accordion/Accordion'
 import { Address } from '../Address/Address'
 import { Breadcrumbs } from '../Breadcrumbs/Breadcrumbs'
 import { Button } from '../Button/Button'
 import { AboutContainer, Aboutme, Biography, Buttons } from './Styled'
 
-export function About({ about }: AboutProps) {
+export function About({ about, services }: AboutPageProps) {
   return (
     <AboutContainer>
-      <Breadcrumbs link="/sobre" text="Sobre" />
+      <Breadcrumbs text="Sobre" />
 
       <Aboutme>
         <section>
@@ -53,6 +54,9 @@ export function About({ about }: AboutProps) {
           <div></div>
         </aside>
       </Aboutme>
+
+      <Breadcrumbs text="Serviços" />
+      <Accordion about={about} services={services} />
     </AboutContainer>
   )
 }

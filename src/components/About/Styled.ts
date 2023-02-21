@@ -7,6 +7,7 @@ export const AboutContainer = styled('main', {
 export const Aboutme = styled('section', {
   gap: '4rem',
   display: 'grid',
+  marginBottom: '8rem',
   gridTemplateColumns: 'auto auto',
 
   section: {

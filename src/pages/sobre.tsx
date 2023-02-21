@@ -6,10 +6,10 @@ import { Footer } from '../components/Footer/Footer'
 import { Grid } from '../components/Grid/Grid'
 import { Header } from '../components/Header/Header'
 import { SEO } from '../components/SEO/SEO'
-import { GET_ABOUT_PAGE } from '../graphql/queries'
+import { GET_ABOUT_PAGE, GET_SERVICES } from '../graphql/queries'
 import { client } from '../lib/apollo-client'
 
-export type AboutProps = {
+type AboutProps = {
   about: {
     slug: string
     title: string
@@ -31,7 +31,18 @@ export type AboutProps = {
   }
 }
 
-export default function Sobre({ about }: AboutProps) {
+type ServicesProps = {
+  services: {
+    id: string
+    tag: string
+    title: string
+    description: string
+  }[]
+}
+
+export type AboutPageProps = AboutProps & ServicesProps
+
+export default function Sobre({ about, services }: AboutPageProps) {
   return (
     <>
       <SEO
@@ -42,7 +53,7 @@ export default function Sobre({ about }: AboutProps) {
       />
       <Grid>
         <Header />
-        <About about={about} />
+        <About about={about} services={services} />
         <Footer />
         <Dock />
       </Grid>
@@ -51,14 +62,21 @@ export default function Sobre({ about }: AboutProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data } = await client.query({
+  const { data: dataAbout } = await client.query({
     query: GET_ABOUT_PAGE
   })
-  const about = data.page
+
+  const { data: dataServices } = await client.query({
+    query: GET_SERVICES
+  })
+
+  const about = dataAbout.page
+  const { services } = dataServices
 
   return {
     props: {
-      about
+      about,
+      services
     },
     revalidate: 60 * 60 * 12 // 12 hours
   }

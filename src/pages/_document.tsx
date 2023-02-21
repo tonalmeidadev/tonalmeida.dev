@@ -7,6 +7,12 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt-BR">
         <Head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Sora:wght@200;400;600&display=swap"
+            rel="stylesheet"
+          />
           <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta httpEquiv="cache-control" content="public" />

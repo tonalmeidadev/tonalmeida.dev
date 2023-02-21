@@ -3,19 +3,19 @@ import Link from 'next/link'
 import { BreadcrumbsContainer } from './Styled'
 
 type BreadcrumbsProps = {
-  link: string
   text: string
 }
 
-export function Breadcrumbs({ link, text }: BreadcrumbsProps) {
+export function Breadcrumbs({ text }: BreadcrumbsProps) {
   return (
     <BreadcrumbsContainer>
       <ul>
         <li>
           <Link href="/">Home</Link>
         </li>
+        <span>/</span>
         <li>
-          <Link href={link}>{text}</Link>
+          <span>{text}</span>
         </li>
       </ul>
     </BreadcrumbsContainer>

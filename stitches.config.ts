@@ -1,18 +1,10 @@
-import { Sora } from '@next/font/google'
-import localFont from '@next/font/local'
 import { createStitches } from '@stitches/react'
-
-const monument = localFont({ src: './public/fonts/Monument-Extended.otf' })
-const sora = Sora({
-  weight: ['200', '400', '700'],
-  subsets: ['latin']
-})
 
 export const { getCssText, globalCss, styled, theme } = createStitches({
   theme: {
     fonts: {
-      default: `${sora.style.fontFamily}`,
-      custom: `${monument.style.fontFamily}`
+      default: '"Sora", sans-serif',
+      custom: '"Monument Extended", sans-serif'
     },
 
     colors: {

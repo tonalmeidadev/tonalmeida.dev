@@ -9,26 +9,30 @@ export const BreadcrumbsContainer = styled('nav', {
     display: 'flex',
     position: 'relative',
 
-    '&:before': {
-      content: '/',
-      bottom: 0,
-      top: '50%',
-      left: '50%',
-      transform: 'translate(-80%, -80%)',
+    '> span': {
+      fontSize: 16,
+      fontWeight: 600,
+      transform: 'translateY(2px)',
       color: theme.colors.gray,
-      position: 'absolute'
+      userSelect: 'none',
+      cursor: 'default'
     },
 
     li: {
-      a: {
+      'a, span': {
         fontSize: 10,
         fontWeight: 300,
         letterSpacing: 1,
         fontFamily: theme.fonts.custom
       },
 
-      '&:hover': {
+      'a:hover': {
         textDecoration: 'underline'
+      },
+
+      'span:hover': {
+        cursor: 'default',
+        userSelect: 'none'
       },
 
       '&:first-child': {
