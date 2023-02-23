@@ -1,12 +1,17 @@
 import Link from 'next/link'
+import { CaretUp } from 'phosphor-react'
 
 import { FooterContainer, Separator } from './Styled'
 
 export function Footer() {
   const getCurrentYear = new Date().getFullYear()
 
+  function handleScrollTop() {
+    window.scrollTo({ top: 0 })
+  }
+
   return (
-    <FooterContainer>
+    <FooterContainer id="footer">
       <h3>Entre em contato</h3>
       <Link href="mailto:oi@tonalmeida.dev">oi@tonalmeida.dev</Link>
 
@@ -32,7 +37,12 @@ export function Footer() {
 
       <Separator />
 
-      <span>Copyright and Designed by Ton Almeida — {getCurrentYear}</span>
+      <div>
+        <span>Copyright and Designed by Ton Almeida — {getCurrentYear}</span>
+        <button onClick={handleScrollTop} title="Ir para o topo">
+          <CaretUp size={20} />
+        </button>
+      </div>
     </FooterContainer>
   )
 }

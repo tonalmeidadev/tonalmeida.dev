@@ -32,7 +32,7 @@ export function Header() {
             title="Entrar em contato pelo WhatsApp"
           >
             <Status variant={'active'} />
-            <span>Disponível agora</span>
+            <span>Disponível</span>
           </Link>
         ) : (
           <Link

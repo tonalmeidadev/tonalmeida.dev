@@ -12,6 +12,7 @@ export const PageContainer = styled('main', {
   h1: {
     gap: '1.5rem',
     display: 'flex',
+    width: 'min-content',
     alignItems: 'center',
 
     span: {

@@ -43,6 +43,35 @@ export const GET_ABOUT_PAGE = gql`
   }
 `
 
+export const GET_SETUP_PAGE = gql`
+  query GET_SETUP_PAGE {
+    page(where: { slug: "setup" }) {
+      slug
+      title
+      description
+      setup {
+        html
+      }
+      ogimage {
+        url
+      }
+    }
+  }
+`
+
+export const GET_WORK_PAGE = gql`
+  query GET_WORK_PAGE {
+    page(where: { slug: "work" }) {
+      slug
+      title
+      description
+      ogimage {
+        url
+      }
+    }
+  }
+`
+
 export const GET_WORKS = gql`
   query GET_WORKS {
     works {
@@ -79,7 +108,9 @@ export const GET_SERVICES = gql`
       id
       tag
       title
-      description
+      description {
+        html
+      }
     }
   }
 `

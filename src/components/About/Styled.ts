@@ -1,7 +1,15 @@
 import { styled, theme } from '../../../stitches.config'
 
 export const AboutContainer = styled('main', {
-  marginTop: '10rem'
+  marginTop: '10rem',
+
+  '@bp1': {
+    marginTop: '8rem'
+  },
+
+  '@bp3': {
+    marginTop: '5rem'
+  }
 })
 
 export const Aboutme = styled('section', {
@@ -33,11 +41,9 @@ export const Aboutme = styled('section', {
     display: 'flex',
     flexDirection: 'column',
 
-    div: {
-      width: 128,
-      height: 128,
+    img: {
       borderRadius: '50%',
-      border: `1px solid ${theme.colors.gray}`,
+      border: `1px solid ${theme.colors.graphite}`,
 
       '&:nth-child(2)': {
         marginTop: '-64px'
@@ -60,13 +66,27 @@ export const Aboutme = styled('section', {
       width: 'fit-content',
       flexDirection: 'row',
 
-      div: {
+      img: {
         '&:nth-child(2)': {
           margin: '0 0 0 -64px'
         },
 
         '&:nth-child(3)': {
           margin: '0 0 0 -64px'
+        }
+      }
+    }
+  },
+
+  '@bp4': {
+    aside: {
+      img: {
+        '&:nth-child(2)': {
+          margin: '0 0 0 -76px'
+        },
+
+        '&:nth-child(3)': {
+          margin: '0 0 0 -76px'
         }
       }
     }

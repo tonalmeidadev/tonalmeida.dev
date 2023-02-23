@@ -4,8 +4,9 @@ import {
   AppWindow,
   Copy,
   Gear,
+  HouseSimple,
   MagnifyingGlass,
-  Shuffle,
+  ShareNetwork,
   User
 } from 'phosphor-react'
 import { toast } from 'react-hot-toast'
@@ -46,6 +47,15 @@ export function KBar({ children }: KBarProps) {
       icon: <Copy size={20} />
     },
     {
+      id: 'home',
+      name: 'Página inicial',
+      shortcut: ['p', 'i'],
+      keywords: 'ir-pagina-inicial',
+      section: 'Ir para',
+      perform: () => router.push('/'),
+      icon: <HouseSimple size={20} />
+    },
+    {
       id: 'about',
       name: 'Sobre mim',
       shortcut: ['s', 'm'],
@@ -68,9 +78,18 @@ export function KBar({ children }: KBarProps) {
       name: 'Setup',
       shortcut: ['s', 't'],
       keywords: 'ir-setup',
-      section: 'Ir para',
+      section: 'Ourtos',
       perform: () => router.push('/setup'),
       icon: <Gear size={20} />
+    },
+    {
+      id: 'social',
+      name: 'Redes Sociais',
+      shortcut: ['s', 'm'],
+      keywords: 'ir-setup',
+      section: 'Ourtos',
+      perform: () => router.push('/setup#footer'),
+      icon: <ShareNetwork size={20} />
     }
   ]
 

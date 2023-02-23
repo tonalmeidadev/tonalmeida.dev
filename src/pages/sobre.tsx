@@ -9,7 +9,7 @@ import { SEO } from '../components/SEO/SEO'
 import { GET_ABOUT_PAGE, GET_SERVICES } from '../graphql/queries'
 import { client } from '../lib/apollo-client'
 
-type AboutProps = {
+export type AboutPageProps = {
   about: {
     slug: string
     title: string
@@ -31,18 +31,21 @@ type AboutProps = {
   }
 }
 
-type ServicesProps = {
+export type ServicesProps = {
   services: {
     id: string
     tag: string
     title: string
-    description: string
+    description: {
+      html: string
+    }
   }[]
 }
 
-export type AboutPageProps = AboutProps & ServicesProps
-
-export default function Sobre({ about, services }: AboutPageProps) {
+export default function Sobre({
+  about,
+  services
+}: AboutPageProps & ServicesProps) {
   return (
     <>
       <SEO

@@ -1,6 +1,6 @@
 import { CaretDown } from 'phosphor-react'
 
-import { AboutPageProps } from '../../pages/sobre'
+import { ServicesProps } from '../../pages/sobre'
 import {
   AccordionContainer,
   AccordionContent,
@@ -9,7 +9,7 @@ import {
   AccordionTrigger
 } from './Styled'
 
-export function Accordion({ services }: AboutPageProps) {
+export function Accordion({ services }: ServicesProps) {
   return (
     <AccordionContainer
       type="single"
@@ -24,7 +24,11 @@ export function Accordion({ services }: AboutPageProps) {
               <CaretDown size={20} aria-hidden />
             </AccordionTrigger>
           </AccordionHeader>
-          <AccordionContent>{services.description}</AccordionContent>
+          <AccordionContent>
+            <div
+              dangerouslySetInnerHTML={{ __html: services.description.html }}
+            />
+          </AccordionContent>
         </AccordionItem>
       ))}
     </AccordionContainer>

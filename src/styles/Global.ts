@@ -1,4 +1,16 @@
+import { keyframes } from '@stitches/react'
+
 import { globalCss, theme } from '../../stitches.config'
+
+const spinnerNProgress = keyframes({
+  '0%': {
+    transform: 'rotate(0deg)'
+  },
+
+  '100%': {
+    transform: 'rotate(360deg)'
+  }
+})
 
 export const globalStyles = globalCss({
   '@font-face': {
@@ -12,8 +24,8 @@ export const globalStyles = globalCss({
     boxSizing: 'border-box',
 
     '&::selection': {
-      color: theme.colors.black,
-      background: theme.colors.white
+      color: theme.colors.white,
+      background: theme.colors.graphite
     }
   },
 
@@ -33,7 +45,8 @@ export const globalStyles = globalCss({
   html: {
     width: '100%',
     height: '100%',
-    overflowX: 'hidden'
+    overflowX: 'hidden',
+    scrollBehavior: 'smooth'
   },
 
   body: {
@@ -55,6 +68,61 @@ export const globalStyles = globalCss({
   a: {
     color: 'inherit',
     textDecoration: 'none'
+  },
+
+  '#nprogress': {
+    pointerEvents: 'none',
+
+    '.bar': {
+      top: 0,
+      left: 0,
+      height: 1,
+      width: '100%',
+      zIndex: 99999,
+      position: 'fixed',
+      background: theme.colors.white
+    },
+
+    '.peg': {
+      right: 0,
+      width: 4,
+      opacity: 1,
+      height: '100%',
+      display: 'block',
+      position: 'absolute',
+      transform: 'rotate(3deg) translate(0, 0.25rem)'
+    },
+
+    '.spinner': {
+      zIndex: 1031,
+      top: 0,
+      left: '50%',
+      transform: 'translateX(-50%) translateY(-50%)',
+      position: 'fixed',
+      display: 'block'
+    },
+
+    '.spinner-icon': {
+      width: 48,
+      height: 48,
+      borderRadius: '50%',
+      boxSizing: 'border-box',
+      border: 'solid 2px transparent',
+      borderTopColor: theme.colors.white,
+      borderLeftColor: theme.colors.white,
+      animation: `${spinnerNProgress} 400ms linear infinite`
+    },
+
+    '.nprogress-custom-parent': {
+      overflow: 'hidden',
+      position: 'relative',
+
+      '#nprogress': {
+        '.bar, .spinner': {
+          position: 'absolute'
+        }
+      }
+    }
   },
 
   '@bp1': {

@@ -4,9 +4,21 @@ import { Dock } from '../components/Dock/Dock'
 import { Footer } from '../components/Footer/Footer'
 import { Grid } from '../components/Grid/Grid'
 import { Header } from '../components/Header/Header'
+import { SEO } from '../components/SEO/SEO'
 import { Works } from '../components/Works/Works'
-import { GET_WORKS, GET_COLLABORATES } from '../graphql/queries'
+import { GET_WORKS, GET_COLLABORATES, GET_WORK_PAGE } from '../graphql/queries'
 import { client } from '../lib/apollo-client'
+
+type WorkPageProps = {
+  work: {
+    slug: string
+    title: string
+    description: string
+    ogimage: {
+      url: string
+    }
+  }
+}
 
 type WorksRecentsProps = {
   works: {
@@ -21,7 +33,7 @@ type WorksRecentsProps = {
   }[]
 }
 
-type WorksParticipateProps = {
+type WorksCollaborateProps = {
   collaborates: {
     id: string
     date: string
@@ -34,11 +46,21 @@ type WorksParticipateProps = {
   }[]
 }
 
-export type WorksPageProps = WorksRecentsProps & WorksParticipateProps
+export type WorksPageProps = WorksRecentsProps & WorksCollaborateProps
 
-export default function Trabalhos({ works, collaborates }: WorksPageProps) {
+export default function Trabalhos({
+  work,
+  works,
+  collaborates
+}: WorkPageProps & WorksPageProps) {
   return (
     <>
+      <SEO
+        titleSufix
+        title={work.title}
+        image={work.ogimage.url}
+        description={work.description}
+      />
       <Grid>
         <Header />
         <Works works={works} collaborates={collaborates} />
@@ -50,6 +72,10 @@ export default function Trabalhos({ works, collaborates }: WorksPageProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
+  const { data: dataWork } = await client.query({
+    query: GET_WORK_PAGE
+  })
+
   const { data: dataWorks } = await client.query({
     query: GET_WORKS
   })
@@ -58,11 +84,13 @@ export const getStaticProps: GetStaticProps = async () => {
     query: GET_COLLABORATES
   })
 
+  const work = dataWork.page
   const { works } = dataWorks
   const { collaborates } = dataCollaborate
 
   return {
     props: {
+      work,
       works,
       collaborates
     },

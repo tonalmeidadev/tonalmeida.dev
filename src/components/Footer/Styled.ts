@@ -24,6 +24,25 @@ export const FooterContainer = styled('footer', {
     '&:hover': {
       textDecoration: 'underline'
     }
+  },
+
+  div: {
+    gap: '2rem',
+    display: 'grid',
+    alignItems: 'center',
+    gridTemplateColumns: '1fr auto',
+
+    button: {
+      width: 32,
+      height: 32,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      background: 'transparent',
+      color: theme.colors.white,
+      cursor: 'pointer',
+      border: '0'
+    }
   }
 })
 

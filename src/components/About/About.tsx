@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import {
   DribbbleLogo,
   EnvelopeSimple,
@@ -6,14 +7,14 @@ import {
   LinkedinLogo
 } from 'phosphor-react'
 
-import { AboutPageProps } from '../../pages/sobre'
+import { AboutPageProps, ServicesProps } from '../../pages/sobre'
 import { Accordion } from '../Accordion/Accordion'
 import { Address } from '../Address/Address'
 import { Breadcrumbs } from '../Breadcrumbs/Breadcrumbs'
 import { Button } from '../Button/Button'
 import { AboutContainer, Aboutme, Biography, Buttons } from './Styled'
 
-export function About({ about, services }: AboutPageProps) {
+export function About({ about, services }: AboutPageProps & ServicesProps) {
   return (
     <AboutContainer>
       <Breadcrumbs text="Sobre" />
@@ -28,35 +29,62 @@ export function About({ about, services }: AboutPageProps) {
           <Address localization={about.localization.html} />
 
           <Buttons>
-            <Button path={about.resume.url} text="Currículo" />
+            <Button path={about.resume.url} text="Currículo" name="Currículo" />
             <div>
-              <Button path="https://github.com/otonalmeidas">
+              <Button path="https://github.com/otonalmeidas" name="GitHub">
                 <GithubLogo size={22} />
               </Button>
-              <Button path="https://linkedin.com/in/wellington-frontend/">
+              <Button
+                path="https://linkedin.com/in/wellington-frontend/"
+                name="LinkedIn"
+              >
                 <LinkedinLogo size={22} />
               </Button>
-              <Button path="https://dribbble.com/otonalmeidas">
+              <Button path="https://dribbble.com/otonalmeidas" name="Dribble">
                 <DribbbleLogo size={22} />
               </Button>
-              <Button path="https://instagram.com/otonalmeidas">
+              <Button
+                path="https://instagram.com/otonalmeidas"
+                name="Instagram"
+              >
                 <InstagramLogo size={22} />
               </Button>
-              <Button path="mailto:oi@tonalmeida.dev">
+              <Button path="mailto:oi@tonalmeida.dev" name="E-mail">
                 <EnvelopeSimple size={22} />
               </Button>
             </div>
           </Buttons>
         </section>
         <aside>
-          <div></div>
-          <div></div>
-          <div></div>
+          <Image
+            src="/assets/photo-one.webp"
+            alt="Foto 1"
+            width={128}
+            height={128}
+            quality={100}
+            priority
+          />
+          <Image
+            src="/assets/photo-two.webp"
+            alt="Foto 2"
+            width={128}
+            height={128}
+            quality={100}
+            priority
+          />
+          <Image
+            src="/assets/photo-three.webp"
+            alt="Foto 3"
+            width={128}
+            height={128}
+            quality={100}
+            priority
+          />
         </aside>
       </Aboutme>
 
       <Breadcrumbs text="Serviços" />
-      <Accordion about={about} services={services} />
+      <Accordion services={services} />
     </AboutContainer>
   )
 }

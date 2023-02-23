@@ -13,7 +13,9 @@ export function Breadcrumbs({ text }: BreadcrumbsProps) {
         <li>
           <Link href="/">Home</Link>
         </li>
-        <span>/</span>
+        <li>
+          <span>/</span>
+        </li>
         <li>
           <span>{text}</span>
         </li>

@@ -34,7 +34,11 @@ export function Works({ works, collaborates }: WorksPageProps) {
           </Card>
         ))}
 
-        <Button path="https://github.com/otonalmeidas" text="Veja mais" />
+        <Button
+          path="https://github.com/otonalmeidas"
+          text="Veja mais"
+          name="GitHub"
+        />
       </Cards>
 
       <h2 style={{ marginTop: '8rem' }}>Projeto que faço parte</h2>

@@ -51,5 +51,13 @@ export const AccordionContent = styled(Accordion.Content, {
   fontSize: 14,
   fontWeight: 200,
   lineHeight: '180%',
-  transition: 'color 150ms ease-in-out'
+  transition: 'color 150ms ease-in-out',
+
+  a: {
+    marginTop: '1rem',
+
+    '&:hover': {
+      textDecoration: 'underline'
+    }
+  }
 })

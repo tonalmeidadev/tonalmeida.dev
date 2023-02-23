@@ -5,6 +5,14 @@ import { styled, theme } from '../../../stitches.config'
 export const WorksContainer = styled('main', {
   marginTop: '10rem',
 
+  '@bp1': {
+    marginTop: '8rem'
+  },
+
+  '@bp3': {
+    marginTop: '5rem'
+  },
+
   h2: {
     fontSize: 14,
     fontWeight: 400,

@@ -55,14 +55,6 @@ export const HeaderContainer = styled('header', {
         }
       }
     }
-  },
-
-  '@bp4': {
-    '> div': {
-      a: {
-        padding: '1.5rem 0.5rem'
-      }
-    }
   }
 })
 
