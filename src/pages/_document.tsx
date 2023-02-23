@@ -17,10 +17,6 @@ export default class MyDocument extends Document {
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta httpEquiv="cache-control" content="public" />
           <meta
-            name="google-site-verification"
-            content={process.env.GOOGLE_SITE_VERIFICATION}
-          />
-          <meta
             name="msvalidate.01"
             content={process.env.MICROSOFT_VALIDATE_01}
           />
