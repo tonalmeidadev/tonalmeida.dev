@@ -57,6 +57,7 @@ export default function Trabalhos({
     <>
       <SEO
         titleSufix
+        path="trabalhos"
         title={work.title}
         image={work.ogimage.url}
         description={work.description}

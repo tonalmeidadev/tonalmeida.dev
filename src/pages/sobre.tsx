@@ -50,6 +50,7 @@ export default function Sobre({
     <>
       <SEO
         titleSufix
+        path="sobre"
         title={about.title}
         image={about.ogimage.url}
         description={about.description}

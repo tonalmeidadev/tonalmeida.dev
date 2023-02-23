@@ -11,7 +11,7 @@ type ButtonProps = {
 
 export function Button({ path, name, text, children }: ButtonProps) {
   return (
-    <ButtonContainer>
+    <ButtonContainer variant={text ? 'text' : 'noText'}>
       <Link
         href={path}
         target="_blank"
@@ -19,7 +19,7 @@ export function Button({ path, name, text, children }: ButtonProps) {
         title={`Acessar ${name}`}
         aria-label={`Acesse meu ${name}`}
       >
-        {text && <span>{text}</span>}
+        {text}
         {children}
       </Link>
     </ButtonContainer>

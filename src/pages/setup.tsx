@@ -28,6 +28,7 @@ export default function Setup({ setup }: SetupPageProps) {
     <>
       <SEO
         titleSufix
+        path="setup"
         title={setup.title}
         image={setup.ogimage.url}
         description={setup.description}
