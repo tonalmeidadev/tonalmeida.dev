@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.tonalmeida.dev/</loc>
+    <loc>https://tonalmeida.dev/</loc>
   </url>
   <url>
-    <loc>https://www.tonalmeida.dev/sobre</loc>
+    <loc>https://tonalmeida.dev/sobre</loc>
   </url>
   <url>
-    <loc>https://www.tonalmeida.dev/trabalhos</loc>
+    <loc>https://tonalmeida.dev/trabalhos</loc>
   </url>
   <url>
-    <loc>https://www.tonalmeida.dev/setup</loc>
+    <loc>https://tonalmeida.dev/setup</loc>
   </url>
 </urlset>
