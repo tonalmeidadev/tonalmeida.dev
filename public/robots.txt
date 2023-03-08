@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Allow: /about
-Allow: /works
+Allow: /sobre
+Allow: /trabalhos
 Allow: /setup
