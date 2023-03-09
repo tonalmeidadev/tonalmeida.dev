@@ -31,7 +31,7 @@ export function About({ about, services }: AboutPageProps & ServicesProps) {
           <Buttons>
             <Button path={about.resume.url} text="Currículo" name="Currículo" />
             <div>
-              <Button path="https://github.com/otonalmeidas" name="GitHub">
+              <Button path="https://github.com/tonalmeidadev" name="GitHub">
                 <GithubLogo size={22} />
               </Button>
               <Button

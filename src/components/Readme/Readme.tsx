@@ -10,7 +10,7 @@ export function Readme({ home }: HomeProps) {
       <Profile>
         <Photo>
           <Image
-            src="https://github.com/otonalmeidas.png"
+            src="https://github.com/tonalmeidadev.png"
             alt="Avatar"
             title="Avatar de Ton"
             height={217}

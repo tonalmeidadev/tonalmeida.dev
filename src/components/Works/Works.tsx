@@ -35,7 +35,7 @@ export function Works({ works, collaborates }: WorksPageProps) {
         ))}
 
         <Button
-          path="https://github.com/otonalmeidas"
+          path="https://github.com/tonalmeidadev"
           text="Veja mais"
           name="GitHub"
         />

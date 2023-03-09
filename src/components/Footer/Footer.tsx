@@ -20,7 +20,7 @@ export function Footer() {
       <h3>Sigam-me</h3>
       <ul>
         <li>
-          <Link href="https://github.com/otonalmeidas">GitHub</Link>
+          <Link href="https://github.com/tonalmeidadev">GitHub</Link>
         </li>
         <li>
           <Link href="https://linkedin.com/in/wellington-frontend">
