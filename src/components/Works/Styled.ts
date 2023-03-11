@@ -60,7 +60,7 @@ export const Card = styled(Link, {
       fontFamily: theme.fonts.custom,
       backgroundColor: theme.colors.black,
       borderRadius: '0 14px 0 14px',
-      padding: '8px 16px',
+      padding: '10px 16px',
       right: 0,
       top: 0,
       position: 'absolute',
@@ -68,7 +68,7 @@ export const Card = styled(Link, {
 
       '&:before': {
         content: '',
-        top: 28,
+        top: 32,
         right: 0,
         width: 12,
         height: 12,
@@ -78,7 +78,7 @@ export const Card = styled(Link, {
 
       '&:after': {
         content: '',
-        top: 28,
+        top: 32,
         right: 0,
         width: 12,
         height: 12,

@@ -28,10 +28,10 @@ export function Footer() {
           </Link>
         </li>
         <li>
-          <Link href="https://dribbble.com/otonalmeidas">Dribbble</Link>
+          <Link href="https://dribbble.com/tonalmeidadev">Dribbble</Link>
         </li>
         <li>
-          <Link href="https://instagram.com/otonalmeidas">Instagram</Link>
+          <Link href="https://instagram.com/tonalmeidadev">Instagram</Link>
         </li>
       </ul>
 

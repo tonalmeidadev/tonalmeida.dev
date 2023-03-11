@@ -40,11 +40,11 @@ export function About({ about, services }: AboutPageProps & ServicesProps) {
               >
                 <LinkedinLogo size={22} />
               </Button>
-              <Button path="https://dribbble.com/otonalmeidas" name="Dribble">
+              <Button path="https://dribbble.com/tonalmeidadev" name="Dribble">
                 <DribbbleLogo size={22} />
               </Button>
               <Button
-                path="https://instagram.com/otonalmeidas"
+                path="https://instagram.com/tonalmeidadev"
                 name="Instagram"
               >
                 <InstagramLogo size={22} />
