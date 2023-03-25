@@ -17,7 +17,7 @@ export function SEO({
 }: SEOProps) {
   const url = `https://www.tonalmeida.dev/${path || ''}`
   const titlePage = `${title}${
-    titleSufix ? ' | Ton Almeida — Front-End Developer' : ''
+    titleSufix ? ' | Ton Almeida — Front-end & Creative Developer' : ''
   }`
 
   return (
