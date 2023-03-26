@@ -1,14 +1,7 @@
 import { useRouter } from 'next/router'
 
+import { DockLinkProps } from '../../types/types'
 import { NextLink as Link } from './Styled'
-
-export type DockLinkProps = {
-  includes?: boolean
-  href: string
-  aria: string
-  title: string
-  children: React.ReactNode
-}
 
 export function DockLink({
   includes,

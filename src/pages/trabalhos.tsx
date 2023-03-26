@@ -8,43 +8,11 @@ import { SEO } from '../components/SEO/SEO'
 import { Works } from '../components/Works/Works'
 import { GET_WORKS, GET_COLLABORATES, GET_WORK_PAGE } from '../graphql/queries'
 import { client } from '../lib/apollo-client'
-
-type WorkPageProps = {
-  work: {
-    slug: string
-    title: string
-    description: string
-    ogimage: {
-      url: string
-    }
-  }
-}
-
-type WorksRecentsProps = {
-  works: {
-    id: string
-    date: string
-    title: string
-    online: string
-    link: string
-    image: {
-      url: string
-    }
-  }[]
-}
-
-type WorksCollaborateProps = {
-  collaborates: {
-    id: string
-    date: string
-    title: string
-    online: string
-    link: string
-    image: {
-      url: string
-    }
-  }[]
-}
+import {
+  WorkPageProps,
+  WorksCollaborateProps,
+  WorksRecentsProps
+} from '../types/types'
 
 export type WorksPageProps = WorksRecentsProps & WorksCollaborateProps
 

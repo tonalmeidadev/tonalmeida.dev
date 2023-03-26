@@ -1,13 +1,7 @@
 import Link from 'next/link'
 
+import { ButtonProps } from '../../types/types'
 import { ButtonContainer } from './Styled'
-
-type ButtonProps = {
-  path: string
-  name: string
-  text?: string
-  children?: React.ReactNode
-}
 
 export function Button({ path, name, text, children }: ButtonProps) {
   return (

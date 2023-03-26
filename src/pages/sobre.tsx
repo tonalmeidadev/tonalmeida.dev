@@ -8,39 +8,7 @@ import { Header } from '../components/Header/Header'
 import { SEO } from '../components/SEO/SEO'
 import { GET_ABOUT_PAGE, GET_SERVICES } from '../graphql/queries'
 import { client } from '../lib/apollo-client'
-
-export type AboutPageProps = {
-  about: {
-    slug: string
-    title: string
-    description: string
-    name: string
-    position: string
-    biography: {
-      html: string
-    }
-    localization: {
-      html: string
-    }
-    resume: {
-      url: string
-    }
-    ogimage: {
-      url: string
-    }
-  }
-}
-
-export type ServicesProps = {
-  services: {
-    id: string
-    tag: string
-    title: string
-    description: {
-      html: string
-    }
-  }[]
-}
+import { AboutPageProps, ServicesProps } from '../types/types'
 
 export default function Sobre({
   about,

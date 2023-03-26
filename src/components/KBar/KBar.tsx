@@ -7,10 +7,11 @@ import {
   ShareNetwork,
   Square
 } from '@phosphor-icons/react'
-import { ActionId, ActionImpl, KBarPortal, KBarProvider } from 'kbar'
+import { KBarPortal, KBarProvider } from 'kbar'
 import { useRouter } from 'next/router'
 import { toast } from 'react-hot-toast'
 
+import { KBarProps } from '../../types/types'
 import { KBarRender } from './KBarRender'
 import {
   KBarContainer,
@@ -18,17 +19,6 @@ import {
   KBarSearch,
   KBarSearchContainer
 } from './Styled'
-
-export type KBarProps = {
-  id?: ActionId
-  name?: string
-  shortcut?: string[]
-  keywords?: string
-  section?: string
-  icon?: string | React.ReactElement | React.ReactNode
-  perform?: (currentActionImpl: ActionImpl) => void
-  children?: React.ReactNode
-}
 
 export function KBar({ children }: KBarProps) {
   const router = useRouter()

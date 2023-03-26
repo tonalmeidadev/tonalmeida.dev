@@ -1,10 +1,7 @@
 import { Compass } from '@phosphor-icons/react'
 
+import { AddressProps } from '../../types/types'
 import { AddressContainer } from './Styled'
-
-type AddressProps = {
-  localization: string
-}
 
 export function Address({ localization }: AddressProps) {
   return (

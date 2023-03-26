@@ -1,6 +1,6 @@
 import { CaretDown } from '@phosphor-icons/react'
 
-import { ServicesProps } from '../../pages/sobre'
+import { ServicesProps } from '../../types/types'
 import {
   AccordionContainer,
   AccordionContent,

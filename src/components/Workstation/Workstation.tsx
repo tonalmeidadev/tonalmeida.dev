@@ -1,4 +1,4 @@
-import { SetupPageProps } from '../../pages/setup'
+import { SetupPageProps } from '../../types/types'
 import { Breadcrumbs } from '../Breadcrumbs/Breadcrumbs'
 import { WorkstationContainer } from './Styled'
 

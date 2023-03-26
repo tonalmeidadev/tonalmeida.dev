@@ -7,7 +7,7 @@ import {
 } from '@phosphor-icons/react'
 import Image from 'next/image'
 
-import { AboutPageProps, ServicesProps } from '../../pages/sobre'
+import { AboutPageProps, ServicesProps } from '../../types/types'
 import { Accordion } from '../Accordion/Accordion'
 import { Address } from '../Address/Address'
 import { Breadcrumbs } from '../Breadcrumbs/Breadcrumbs'

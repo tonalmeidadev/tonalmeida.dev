@@ -1,10 +1,7 @@
 import Link from 'next/link'
 
+import { BreadcrumbsProps } from '../../types/types'
 import { BreadcrumbsContainer } from './Styled'
-
-type BreadcrumbsProps = {
-  text: string
-}
 
 export function Breadcrumbs({ text }: BreadcrumbsProps) {
   return (

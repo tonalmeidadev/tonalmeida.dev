@@ -1,10 +1,7 @@
 import { useRouter } from 'next/router'
 
+import { GridProps } from '../../types/types'
 import { GridContainer } from './Styled'
-
-type GridProps = {
-  children: React.ReactNode
-}
 
 export function Grid({ children }: GridProps) {
   const router = useRouter()

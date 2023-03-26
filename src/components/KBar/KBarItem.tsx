@@ -1,12 +1,7 @@
 import React, { forwardRef } from 'react'
 
-import { KBarProps } from './KBar'
+import { KBarContainerProps } from '../../types/types'
 import { KBarCommand, KBarIcon, KBarItem, KBarItemBox, KBarKbd } from './Styled'
-
-type KBarContainerProps = {
-  action: KBarProps
-  active: boolean
-}
 
 export function KBarContainer(
   { action, active }: KBarContainerProps,

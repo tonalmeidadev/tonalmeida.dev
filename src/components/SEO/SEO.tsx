@@ -1,12 +1,6 @@
 import { NextSeo } from 'next-seo'
 
-type SEOProps = {
-  path?: string
-  title: string
-  image: string
-  description: string
-  titleSufix?: boolean
-}
+import { SEOProps } from '../../types/types'
 
 export function SEO({
   path,

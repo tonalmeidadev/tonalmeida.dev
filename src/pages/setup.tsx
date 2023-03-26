@@ -8,20 +8,7 @@ import { SEO } from '../components/SEO/SEO'
 import { Workstation } from '../components/Workstation/Workstation'
 import { GET_SETUP_PAGE } from '../graphql/queries'
 import { client } from '../lib/apollo-client'
-
-export type SetupPageProps = {
-  setup: {
-    slug: string
-    title: string
-    description: string
-    setup: {
-      html: string
-    }
-    ogimage: {
-      url: string
-    }
-  }
-}
+import { SetupPageProps } from '../types/types'
 
 export default function Setup({ setup }: SetupPageProps) {
   return (

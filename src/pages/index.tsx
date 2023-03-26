@@ -7,23 +7,7 @@ import { Readme } from '../components/Readme/Readme'
 import { SEO } from '../components/SEO/SEO'
 import { GET_HOME_PAGE } from '../graphql/queries'
 import { client } from '../lib/apollo-client'
-
-export type HomeProps = {
-  home: {
-    slug: string
-    title: string
-    description: string
-    name: string
-    position: string
-    minibiography: string
-    localization: {
-      html: string
-    }
-    ogimage: {
-      url: string
-    }
-  }
-}
+import { HomeProps } from '../types/types'
 
 export default function Home({ home }: HomeProps) {
   return (

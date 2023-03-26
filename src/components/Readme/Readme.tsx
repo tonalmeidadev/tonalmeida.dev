@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { HomeProps } from '../../pages'
+import { HomeProps } from '../../types/types'
 import { Address } from '../Address/Address'
 import { ReadmeContainer, Profile, Photo, Resume } from './Styled'
 
