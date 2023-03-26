@@ -7,8 +7,8 @@ export const GridContainer = styled('div', {
   padding: '0 4rem',
   margin: '0 auto',
   position: 'relative',
-  borderRight: `1px solid ${theme.colors.dark}`,
-  borderLeft: `1px solid ${theme.colors.dark}`,
+  borderRight: `1px solid ${theme.colors.gray100}`,
+  borderLeft: `1px solid ${theme.colors.gray100}`,
 
   '&:before': {
     content: '',
@@ -17,7 +17,7 @@ export const GridContainer = styled('div', {
     bottom: 0,
     left: '50%',
     transform: 'translateX(-50%)',
-    backgroundColor: theme.colors.dark,
+    backgroundColor: theme.colors.gray100,
     position: 'absolute',
     height: '100%',
     width: 1

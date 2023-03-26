@@ -9,7 +9,7 @@ export function Toaster() {
       containerStyle={{
         top: '2rem',
         left: '2rem',
-        bottom: '8.5rem',
+        bottom: '8rem',
         right: '2rem'
       }}
       toastOptions={{
@@ -20,8 +20,8 @@ export function Toaster() {
           borderRadius: 16,
           padding: '6px 14px',
           fontFamily: `${theme.fonts.custom}`,
-          backgroundColor: `${theme.colors.dark}`,
-          color: `${theme.colors.white}`
+          backgroundColor: `${theme.colors.gray100}`,
+          color: `${theme.colors.neutral900}`
         }
       }}
     />

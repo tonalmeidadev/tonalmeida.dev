@@ -13,7 +13,7 @@ export const AboutContainer = styled('main', {
 })
 
 export const Aboutme = styled('section', {
-  gap: '4rem',
+  gap: '8rem',
   display: 'grid',
   marginBottom: '8rem',
   gridTemplateColumns: 'auto auto',
@@ -23,7 +23,6 @@ export const Aboutme = styled('section', {
       fontSize: 36,
       fontWeight: 400,
       fontFamily: theme.fonts.custom,
-      textTransform: 'uppercase',
       marginBottom: '1rem',
       lineHeight: '85%'
     },
@@ -37,25 +36,26 @@ export const Aboutme = styled('section', {
   },
 
   aside: {
-    width: 128,
+    width: 160,
     display: 'flex',
     flexDirection: 'column',
 
     img: {
       borderRadius: '50%',
-      border: `1px solid ${theme.colors.graphite}`,
+      border: `2px solid ${theme.colors.gray100}`,
 
       '&:nth-child(2)': {
-        marginTop: '-64px'
+        marginTop: '-80px'
       },
 
       '&:nth-child(3)': {
-        marginTop: '-64px'
+        marginTop: '-80px'
       }
     }
   },
 
   '@bp2': {
+    gap: '4rem',
     gridTemplateColumns: '1fr',
 
     section: {

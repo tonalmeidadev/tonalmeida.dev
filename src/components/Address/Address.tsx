@@ -1,4 +1,4 @@
-import { Compass } from 'phosphor-react'
+import { Compass } from '@phosphor-icons/react'
 
 import { AddressContainer } from './Styled'
 

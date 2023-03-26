@@ -38,6 +38,7 @@ export const Cards = styled('section', {
 
 export const Card = styled(Link, {
   display: 'flex',
+  cursor: 'pointer',
   flexDirection: 'column',
   borderRadius: 14,
 
@@ -47,7 +48,7 @@ export const Card = styled(Link, {
     borderRadius: 14,
     marginBottom: '1rem',
     position: 'relative',
-    backgroundColor: theme.colors.dark,
+    backgroundColor: theme.colors.gray100,
     justifyContent: 'center',
     alignItems: 'center',
     display: 'flex',
@@ -56,9 +57,9 @@ export const Card = styled(Link, {
       fontSize: 10,
       fontWeight: 300,
       letterSpacing: 1,
-      color: theme.colors.silver,
+      color: theme.colors.green,
       fontFamily: theme.fonts.custom,
-      backgroundColor: theme.colors.black,
+      backgroundColor: theme.colors.neutral100,
       borderRadius: '0 14px 0 14px',
       padding: '10px 16px',
       right: 0,
@@ -73,7 +74,7 @@ export const Card = styled(Link, {
         width: 12,
         height: 12,
         position: 'absolute',
-        background: theme.colors.black
+        background: theme.colors.neutral100
       },
 
       '&:after': {
@@ -84,7 +85,7 @@ export const Card = styled(Link, {
         height: 12,
         position: 'absolute',
         borderRadius: '0 14px 0 0',
-        background: theme.colors.dark
+        background: theme.colors.gray100
       }
     }
   },
@@ -95,31 +96,28 @@ export const Card = styled(Link, {
     letterSpacing: 1,
     textAlign: 'center',
     textTransform: 'uppercase',
-    color: theme.colors.silver,
+    color: theme.colors.neutral900,
     fontFamily: theme.fonts.custom,
     transition: 'color 150ms ease-in-out'
   },
 
-  '&:hover': {
-    div: {
-      strong: {
-        color: theme.colors.white
-      }
-    },
-
-    span: {
-      color: theme.colors.white
-    }
-  },
-
   variants: {
     variant: {
-      true: {
-        cursor: 'pointer'
-      },
-
+      true: {},
       false: {
-        cursor: 'not-allowed'
+        cursor: 'not-allowed',
+
+        div: {
+          opacity: 0.5,
+
+          strong: {
+            color: theme.colors.gray900
+          }
+        },
+
+        span: {
+          color: theme.colors.gray500
+        }
       }
     }
   }

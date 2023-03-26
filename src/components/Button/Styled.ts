@@ -1,7 +1,7 @@
 import { styled, theme } from '../../../stitches.config'
 
 export const ButtonContainer = styled('button', {
-  backgroundColor: theme.colors.dark,
+  backgroundColor: theme.colors.gray100,
   width: 'fit-content',
   borderRadius: 10,
   outline: 'none',
@@ -14,21 +14,21 @@ export const ButtonContainer = styled('button', {
     fontSize: 10,
     fontWeight: 300,
     letterSpacing: 1,
-    color: theme.colors.silver,
     textTransform: 'uppercase',
+    color: theme.colors.neutral500,
     fontFamily: theme.fonts.custom,
     transition: 'color 150ms ease-in-out',
 
     svg: {
-      color: theme.colors.silver,
+      color: theme.colors.neutral500,
       transition: '150ms ease-in-out'
     },
 
     '&:hover': {
-      color: theme.colors.white,
+      color: theme.colors.neutral900,
 
       svg: {
-        color: theme.colors.white,
+        color: theme.colors.neutral900,
         transform: 'translateY(-0.125rem)'
       }
     }

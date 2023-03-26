@@ -38,7 +38,7 @@ export const WorkstationContainer = styled('main', {
         lineHeight: '180%',
 
         em: {
-          color: theme.colors.silver
+          color: theme.colors.neutral300
         },
 
         '&::maker': {

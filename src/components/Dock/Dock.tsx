@@ -1,11 +1,11 @@
-import { useKBar } from 'kbar'
 import {
-  AppWindow,
   Command,
-  HouseSimple,
+  FingerprintSimple,
+  LinkSimple,
   PaperPlaneTilt,
-  User
-} from 'phosphor-react'
+  Square
+} from '@phosphor-icons/react'
+import { useKBar } from 'kbar'
 
 import { DockLink } from './DockLink'
 import { DockContainer, UseKBar, Navigation } from './Styled'
@@ -26,7 +26,7 @@ export function Dock() {
         title="Abrir menu"
       >
         <div>
-          <Command />
+          <Command weight="regular" />
         </div>
       </UseKBar>
 
@@ -38,7 +38,7 @@ export function Dock() {
               aria="Link para página inicial"
               title="Ir para página inicial"
             >
-              <HouseSimple />
+              <Square weight="regular" />
             </DockLink>
           </li>
           <li>
@@ -47,7 +47,7 @@ export function Dock() {
               aria="Link para página sobre mim"
               title="Ir para página sobre mim"
             >
-              <User />
+              <FingerprintSimple weight="regular" />
             </DockLink>
           </li>
           <li>
@@ -56,7 +56,7 @@ export function Dock() {
               aria="Link para página de projetos"
               title="Ir para página de trabalhos"
             >
-              <AppWindow />
+              <LinkSimple weight="regular" />
             </DockLink>
           </li>
           <li>
@@ -65,7 +65,7 @@ export function Dock() {
               aria="Link para enviar e-mail"
               title="Ir para enviar e-mail"
             >
-              <PaperPlaneTilt />
+              <PaperPlaneTilt weight="regular" />
             </DockLink>
           </li>
         </ul>

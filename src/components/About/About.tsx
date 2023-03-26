@@ -1,11 +1,11 @@
-import Image from 'next/image'
 import {
   DribbbleLogo,
   EnvelopeSimple,
   GithubLogo,
   InstagramLogo,
   LinkedinLogo
-} from 'phosphor-react'
+} from '@phosphor-icons/react'
+import Image from 'next/image'
 
 import { AboutPageProps, ServicesProps } from '../../pages/sobre'
 import { Accordion } from '../Accordion/Accordion'
@@ -59,24 +59,24 @@ export function About({ about, services }: AboutPageProps & ServicesProps) {
           <Image
             src="/assets/photo-one.webp"
             alt="Foto 1"
-            width={128}
-            height={128}
+            width={160}
+            height={160}
             quality={100}
             priority
           />
           <Image
             src="/assets/photo-two.webp"
             alt="Foto 2"
-            width={128}
-            height={128}
+            width={160}
+            height={160}
             quality={100}
             priority
           />
           <Image
             src="/assets/photo-three.webp"
             alt="Foto 3"
-            width={128}
-            height={128}
+            width={160}
+            height={160}
             quality={100}
             priority
           />

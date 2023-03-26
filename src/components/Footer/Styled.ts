@@ -21,6 +21,8 @@ export const FooterContainer = styled('footer', {
   },
 
   a: {
+    width: 'fit-content',
+
     '&:hover': {
       textDecoration: 'underline'
     }
@@ -39,7 +41,7 @@ export const FooterContainer = styled('footer', {
       alignItems: 'center',
       justifyContent: 'center',
       background: 'transparent',
-      color: theme.colors.white,
+      color: theme.colors.neutral900,
       cursor: 'pointer',
       border: '0'
     }
@@ -49,5 +51,5 @@ export const FooterContainer = styled('footer', {
 export const Separator = styled(Root, {
   height: '1px',
   width: '100%',
-  backgroundColor: theme.colors.smooky
+  backgroundColor: theme.colors.gray100
 })

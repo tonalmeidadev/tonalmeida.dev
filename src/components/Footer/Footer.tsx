@@ -1,5 +1,5 @@
+import { ArrowUp } from '@phosphor-icons/react'
 import Link from 'next/link'
-import { CaretUp } from 'phosphor-react'
 
 import { FooterContainer, Separator } from './Styled'
 
@@ -40,7 +40,7 @@ export function Footer() {
       <div>
         <span>Copyright and Designed by Ton Almeida — {getCurrentYear}</span>
         <button onClick={handleScrollTop} title="Ir para o topo">
-          <CaretUp size={20} />
+          <ArrowUp weight="regular" size={20} />
         </button>
       </div>
     </FooterContainer>

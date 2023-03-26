@@ -20,38 +20,48 @@ export const AccordionTrigger = styled(Accordion.Trigger, {
   alignItems: 'center',
   background: 'transparent',
   justifyContent: 'space-between',
-  borderBottom: `1px solid ${theme.colors.smooky}`,
+  backgroundColor: theme.colors.neutral100,
+  borderBottom: `1px solid ${theme.colors.gray100}`,
   fontFamily: theme.fonts.custom,
-  color: theme.colors.silver,
+  color: theme.colors.gray900,
   textAlign: 'initial',
   letterSpacing: 1,
   fontWeight: 400,
   fontSize: 14,
   transition: 'color 150ms ease-in-out',
 
-  '&:hover': {
-    color: theme.colors.white
+  svg: {
+    color: theme.colors.gray900,
+    transition: '150ms ease-in-out'
   },
 
-  svg: {
-    transition: 'transform 150ms ease-in-out'
+  '&:hover': {
+    color: theme.colors.neutral900,
+
+    svg: {
+      color: theme.colors.neutral900
+    }
   },
 
   '&[data-state="open"]': {
-    color: theme.colors.white,
+    color: theme.colors.neutral900,
+    borderBottom: `1px solid ${theme.colors.gray700}`,
 
     svg: {
+      color: theme.colors.neutral900,
       transform: 'rotate(180deg)'
     }
   }
 })
 
 export const AccordionContent = styled(Accordion.Content, {
-  padding: '16px 0',
   fontSize: 14,
   fontWeight: 200,
   lineHeight: '180%',
+  padding: '16px 0 32px',
+  backgroundColor: theme.colors.neutral100,
   transition: 'color 150ms ease-in-out',
+  color: theme.colors.neutral900,
 
   a: {
     marginTop: '1rem',

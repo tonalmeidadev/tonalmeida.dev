@@ -31,7 +31,7 @@ export const PageContainer = styled('main', {
     div: {
       width: 1,
       height: '4rem',
-      backgroundColor: theme.colors.white
+      backgroundColor: theme.colors.neutral900
     }
   }
 })

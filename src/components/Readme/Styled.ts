@@ -21,16 +21,10 @@ export const Profile = styled('section', {
   flexDirection: 'column',
   gap: '1.125rem',
 
-  img: {
-    borderRadius: '50%',
-    border: `1px solid ${theme.colors.dark}`
-  },
-
   h1: {
     fontSize: 36,
     fontWeight: 400,
     fontFamily: theme.fonts.custom,
-    textTransform: 'uppercase',
     lineHeight: '85%'
   },
 
@@ -66,7 +60,11 @@ export const Photo = styled('div', {
   marginBottom: '1rem',
   width: 'fit-content',
   height: 'fit-content',
-  border: `6px solid ${theme.colors.dark}`
+  border: `6px solid ${theme.colors.gray100}`,
+
+  img: {
+    borderRadius: '50%'
+  }
 })
 
 export const Resume = styled('section', {

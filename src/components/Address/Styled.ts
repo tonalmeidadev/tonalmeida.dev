@@ -21,7 +21,7 @@ export const AddressContainer = styled(Link, {
   gap: '1rem',
   display: 'flex',
   alignItems: 'center',
-  color: theme.colors.white,
+  color: theme.colors.neutral900,
   width: 'fit-content',
 
   svg: {

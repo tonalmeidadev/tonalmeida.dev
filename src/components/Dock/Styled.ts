@@ -20,20 +20,20 @@ export const UseKBar = styled('button', {
   border: 0,
   padding: 6,
   display: 'flex',
-  borderRadius: 16,
+  borderRadius: 18,
   backdropFilter: 'blur(10px)',
-  backgroundColor: theme.colors.grayOpacity,
+  backgroundColor: theme.colors.grayOpc,
   cursor: 'pointer',
 
   div: {
     padding: 16,
     display: 'flex',
-    borderRadius: 12,
-    backgroundColor: theme.colors.black,
+    borderRadius: 14,
+    backgroundColor: theme.colors.neutral100,
 
     svg: {
       fontSize: 22,
-      color: theme.colors.white
+      color: theme.colors.neutral900
     }
   },
 
@@ -48,9 +48,9 @@ export const Navigation = styled('nav', {
     gap: 6,
     padding: 6,
     display: 'flex',
-    borderRadius: '0.875rem',
+    borderRadius: 18,
     backdropFilter: 'blur(10px)',
-    backgroundColor: theme.colors.grayOpacity,
+    backgroundColor: theme.colors.grayOpc,
 
     li: {
       border: 0,
@@ -74,8 +74,8 @@ export const Navigation = styled('nav', {
 export const NextLink = styled(Link, {
   padding: 16,
   display: 'flex',
-  borderRadius: 12,
-  backgroundColor: theme.colors.black,
+  borderRadius: 14,
+  backgroundColor: theme.colors.neutral100,
   transition: 'transform 150ms ease-in-out',
 
   svg: {
@@ -87,7 +87,7 @@ export const NextLink = styled(Link, {
     transform: 'translateY(-0.125rem)',
 
     svg: {
-      color: theme.colors.white
+      color: theme.colors.neutral900
     }
   },
 
@@ -98,14 +98,14 @@ export const NextLink = styled(Link, {
           transform: 'inherit',
 
           svg: {
-            color: theme.colors.white
+            color: theme.colors.neutral900
           }
         }
       },
 
       false: {
         svg: {
-          color: theme.colors.gray
+          color: theme.colors.gray700
         }
       }
     }

@@ -1,14 +1,14 @@
-import { ActionId, ActionImpl, KBarPortal, KBarProvider } from 'kbar'
-import { useRouter } from 'next/router'
 import {
-  AppWindow,
   Copy,
-  Gear,
-  HouseSimple,
+  FingerprintSimple,
+  Laptop,
+  LinkSimple,
   MagnifyingGlass,
   ShareNetwork,
-  User
-} from 'phosphor-react'
+  Square
+} from '@phosphor-icons/react'
+import { ActionId, ActionImpl, KBarPortal, KBarProvider } from 'kbar'
+import { useRouter } from 'next/router'
 import { toast } from 'react-hot-toast'
 
 import { KBarRender } from './KBarRender'
@@ -53,7 +53,7 @@ export function KBar({ children }: KBarProps) {
       keywords: 'ir-pagina-inicial',
       section: 'Ir para',
       perform: () => router.push('/'),
-      icon: <HouseSimple size={20} />
+      icon: <Square size={20} />
     },
     {
       id: 'about',
@@ -62,7 +62,7 @@ export function KBar({ children }: KBarProps) {
       keywords: 'ir-sobre',
       section: 'Ir para',
       perform: () => router.push('/sobre'),
-      icon: <User size={20} />
+      icon: <FingerprintSimple size={20} />
     },
     {
       id: 'trabalhos',
@@ -71,7 +71,7 @@ export function KBar({ children }: KBarProps) {
       keywords: 'ir-trabalhos',
       section: 'Ir para',
       perform: () => router.push('/trabalhos'),
-      icon: <AppWindow size={20} />
+      icon: <LinkSimple size={20} />
     },
     {
       id: 'setup',
@@ -80,7 +80,7 @@ export function KBar({ children }: KBarProps) {
       keywords: 'ir-setup',
       section: 'Ourtos',
       perform: () => router.push('/setup'),
-      icon: <Gear size={20} />
+      icon: <Laptop size={20} />
     },
     {
       id: 'social',

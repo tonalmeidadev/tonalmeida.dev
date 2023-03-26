@@ -1,16 +1,5 @@
-import { keyframes } from '@stitches/react'
-
 import { globalCss, theme } from '../../stitches.config'
-
-const spinnerNProgress = keyframes({
-  '0%': {
-    transform: 'rotate(0deg)'
-  },
-
-  '100%': {
-    transform: 'rotate(360deg)'
-  }
-})
+import { spinnerNProgress } from './Motions'
 
 export const globalStyles = globalCss({
   '@font-face': {
@@ -24,8 +13,8 @@ export const globalStyles = globalCss({
     boxSizing: 'border-box',
 
     '&::selection': {
-      color: theme.colors.white,
-      background: theme.colors.graphite
+      color: theme.colors.neutral900,
+      background: theme.colors.gray500
     }
   },
 
@@ -34,12 +23,12 @@ export const globalStyles = globalCss({
   },
 
   '::-webkit-scrollbar-track': {
-    background: theme.colors.black
+    background: theme.colors.neutral100
   },
 
   '::-webkit-scrollbar-thumb': {
     borderRadius: 1,
-    background: theme.colors.white
+    backgroundColor: theme.colors.neutral900
   },
 
   html: {
@@ -50,8 +39,8 @@ export const globalStyles = globalCss({
   },
 
   body: {
-    color: theme.colors.white,
-    background: theme.colors.black,
+    color: theme.colors.neutral900,
+    backgroundColor: theme.colors.neutral100,
     '-webkit-font-smoothing': 'antialiased'
   },
 
@@ -80,7 +69,7 @@ export const globalStyles = globalCss({
       width: '100%',
       zIndex: 99999,
       position: 'fixed',
-      background: theme.colors.white
+      background: theme.colors.neutral900
     },
 
     '.peg': {
@@ -108,8 +97,8 @@ export const globalStyles = globalCss({
       borderRadius: '50%',
       boxSizing: 'border-box',
       border: 'solid 2px transparent',
-      borderTopColor: theme.colors.white,
-      borderLeftColor: theme.colors.white,
+      borderTopColor: theme.colors.neutral900,
+      borderLeftColor: theme.colors.neutral900,
       animation: `${spinnerNProgress} 400ms linear infinite`
     },
 

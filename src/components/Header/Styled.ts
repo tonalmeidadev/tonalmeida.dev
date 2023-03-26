@@ -1,20 +1,5 @@
-import { keyframes } from '@stitches/react'
-
 import { styled, theme } from '../../../stitches.config'
-
-const flashingLed = keyframes({
-  '0%, 10%': {
-    opacity: 0
-  },
-
-  '5%': {
-    opacity: 1
-  },
-
-  '11%': {
-    opacity: 1
-  }
-})
+import { flashingLed } from '../../styles/Motions'
 
 export const HeaderContainer = styled('header', {
   width: '100%',
@@ -26,32 +11,35 @@ export const HeaderContainer = styled('header', {
     display: 'flex',
 
     a: {
-      padding: '2rem'
+      padding: '2rem 1rem'
     }
   },
 
-  address: {
-    fontStyle: 'normal',
+  ul: {
+    gap: '1.5rem',
+    display: 'flex',
+    alignItems: 'center',
 
-    a: {
-      display: 'flex',
-      borderRadius: 16,
-      padding: '10px 22px',
-      backgroundColor: theme.colors.dark,
-      position: 'relative',
+    li: {
+      address: {
+        fontStyle: 'normal',
 
-      span: {
-        fontSize: 10,
-        fontWeight: 400,
-        letterSpacing: 1,
-        color: theme.colors.silver,
-        fontFamily: theme.fonts.custom,
-        transition: 'color 150ms ease-in-out'
-      },
+        a: {
+          gap: '0.5rem',
+          display: 'flex',
+          alignItems: 'center',
+          borderRadius: 12,
+          padding: '12px 22px',
+          backgroundColor: theme.colors.gray100,
+          position: 'relative',
 
-      '&:hover': {
-        span: {
-          color: theme.colors.white
+          span: {
+            fontSize: 10,
+            fontWeight: 400,
+            letterSpacing: 1,
+            color: theme.colors.neutral900,
+            fontFamily: theme.fonts.custom
+          }
         }
       }
     }
@@ -64,20 +52,9 @@ export const Status = styled('div', {
   transform: 'translateY(-50%)',
   position: 'absolute',
   borderRadius: 5,
-  height: 12,
-  width: 6,
+  height: 14,
+  width: 8,
   opacity: 1,
-  animation: `${flashingLed} 5s infinite`,
-
-  variants: {
-    variant: {
-      active: {
-        backgroundColor: theme.colors.white
-      },
-
-      inactive: {
-        backgroundColor: theme.colors.graphite
-      }
-    }
-  }
+  backgroundColor: theme.colors.green,
+  animation: `${flashingLed} 5s infinite`
 })

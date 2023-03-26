@@ -1,4 +1,4 @@
-import { CaretDown } from 'phosphor-react'
+import { CaretDown } from '@phosphor-icons/react'
 
 import { ServicesProps } from '../../pages/sobre'
 import {

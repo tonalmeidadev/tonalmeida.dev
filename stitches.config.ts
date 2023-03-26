@@ -1,3 +1,4 @@
+import { gray, grayDark, whiteA, green, red } from '@radix-ui/colors'
 import { createStitches } from '@stitches/react'
 
 export const { getCssText, globalCss, styled, theme } = createStitches({
@@ -8,14 +9,18 @@ export const { getCssText, globalCss, styled, theme } = createStitches({
     },
 
     colors: {
-      white: '#F5F5FA',
-      black: '#000000',
-      dark: '#111111',
-      smooky: '#222222',
-      graphite: '#3A3A3A',
-      gray: '#5C5C5C',
-      silver: '#B5B5B5',
-      grayOpacity: '#77777725'
+      neutral100: '#000000',
+      neutral300: gray.gray8,
+      neutral500: gray.gray7,
+      neutral900: gray.gray1,
+      gray100: grayDark.gray1,
+      gray300: grayDark.gray3,
+      gray500: grayDark.gray5,
+      gray700: grayDark.gray7,
+      gray900: grayDark.gray9,
+      grayOpc: whiteA.whiteA5,
+      green: green.green10,
+      red: red.red10
     }
   },
 

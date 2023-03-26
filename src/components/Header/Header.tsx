@@ -4,9 +4,6 @@ import Link from 'next/link'
 import { HeaderContainer, Status } from './Styled'
 
 export function Header() {
-  const getDate = new Date().getHours()
-  const available = getDate >= 7 && getDate <= 23
-
   return (
     <HeaderContainer>
       <div>
@@ -23,29 +20,21 @@ export function Header() {
         </Link>
       </div>
 
-      <address>
-        {available ? (
-          <Link
-            href="https://api.whatsapp.com/send?phone=5511960245642"
-            target="_blank"
-            aria-label="Link para enviar mensagem no WhatsApp"
-            title="Entrar em contato pelo WhatsApp"
-          >
-            <Status variant={'active'} />
-            <span>Disponível</span>
-          </Link>
-        ) : (
-          <Link
-            href="mailto:oi@tonalmeida.dev"
-            target="_self"
-            aria-label="Link para enviar e-mail"
-            title="Entrar em contato por e-mail"
-          >
-            <Status variant={'inactive'} />
-            <span>Não disponível</span>
-          </Link>
-        )}
-      </address>
+      <ul>
+        <li>
+          <address>
+            <Link
+              href="https://api.whatsapp.com/send?phone=5511960245642"
+              target="_blank"
+              aria-label="Link para enviar mensagem no WhatsApp"
+              title="Entrar em contato pelo WhatsApp"
+            >
+              <Status />
+              <span>Disponível agora</span>
+            </Link>
+          </address>
+        </li>
+      </ul>
     </HeaderContainer>
   )
 }
