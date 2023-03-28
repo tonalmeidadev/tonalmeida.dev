@@ -60,9 +60,9 @@ export const Card = styled(Link, {
       color: theme.colors.green,
       fontFamily: theme.fonts.custom,
       backgroundColor: theme.colors.neutral100,
-      borderRadius: '0 14px 0 14px',
-      padding: '10px 16px',
-      right: 0,
+      borderRadius: '14px 0 14px 0',
+      padding: '10px 18px',
+      left: 0,
       top: 0,
       position: 'absolute',
       transition: 'color 150ms ease-in-out',
@@ -70,9 +70,9 @@ export const Card = styled(Link, {
       '&:before': {
         content: '',
         top: 32,
-        right: 0,
-        width: 12,
-        height: 12,
+        left: 0,
+        width: 14,
+        height: 14,
         position: 'absolute',
         background: theme.colors.neutral100
       },
@@ -80,11 +80,11 @@ export const Card = styled(Link, {
       '&:after': {
         content: '',
         top: 32,
-        right: 0,
-        width: 12,
-        height: 12,
+        left: 0,
+        width: 14,
+        height: 14,
         position: 'absolute',
-        borderRadius: '0 14px 0 0',
+        borderRadius: '14px 0 0 0',
         background: theme.colors.gray100
       }
     }
@@ -105,7 +105,8 @@ export const Card = styled(Link, {
     variant: {
       true: {},
       false: {
-        cursor: 'not-allowed',
+        userSelect: 'none',
+        pointerEvents: 'none',
 
         div: {
           opacity: 0.5,

@@ -1,3 +1,4 @@
+import { Link } from '@phosphor-icons/react'
 import Image from 'next/image'
 
 import { WorksPageProps } from '../../pages/trabalhos'
@@ -15,7 +16,7 @@ export function Works({ works, collaborates }: WorksPageProps) {
         {works.map((works) => (
           <Card
             key={works.id}
-            href={works.online ? works.link : '/trabalhos'}
+            href={works.online ? works.link : ''}
             variant={works.online ? 'true' : 'false'}
             target={works.online ? '_blank' : '_self'}
             rel="noopener noreferrer"
@@ -38,7 +39,9 @@ export function Works({ works, collaborates }: WorksPageProps) {
           path="https://github.com/tonalmeidadev"
           text="Veja mais"
           name="GitHub"
-        />
+        >
+          <Link size={22} />
+        </Button>
       </Cards>
 
       <h2 style={{ marginTop: '8rem' }}>Projeto que faço parte</h2>
