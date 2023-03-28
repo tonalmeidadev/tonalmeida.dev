@@ -9,7 +9,7 @@ export const WorksContainer = styled('main', {
     marginTop: '8rem'
   },
 
-  '@bp3': {
+  '@bp4': {
     marginTop: '5rem'
   },
 
@@ -31,7 +31,7 @@ export const Cards = styled('section', {
     margin: 'auto auto'
   },
 
-  '@bp3': {
+  '@bp4': {
     gridTemplateColumns: '1fr'
   }
 })

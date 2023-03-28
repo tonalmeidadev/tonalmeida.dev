@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { styled, theme } from '../../../stitches.config'
 import { flashingLed } from '../../styles/Motions'
 
@@ -11,7 +13,7 @@ export const HeaderContainer = styled('header', {
     display: 'flex',
 
     a: {
-      padding: '2rem 1rem'
+      padding: '2rem 1rem 2rem 0.5rem'
     }
   },
 
@@ -22,25 +24,40 @@ export const HeaderContainer = styled('header', {
 
     li: {
       address: {
-        fontStyle: 'normal',
+        fontStyle: 'normal'
+      }
+    }
+  }
+})
 
-        a: {
-          gap: '0.5rem',
-          display: 'flex',
-          alignItems: 'center',
-          borderRadius: 12,
-          padding: '12px 22px',
-          backgroundColor: theme.colors.gray100,
-          position: 'relative',
+export const Contact = styled(Link, {
+  gap: '0.5rem',
+  display: 'flex',
+  alignItems: 'center',
+  borderRadius: 12,
+  padding: '12px 22px',
+  backgroundColor: theme.colors.gray100,
+  position: 'relative',
 
-          span: {
-            fontSize: 10,
-            fontWeight: 400,
-            letterSpacing: 1,
-            color: theme.colors.neutral900,
-            fontFamily: theme.fonts.custom
-          }
-        }
+  span: {
+    fontSize: 10,
+    fontWeight: 400,
+    letterSpacing: 1,
+    color: theme.colors.neutral900,
+    fontFamily: theme.fonts.custom,
+
+    '&:nth-child(3)': {
+      display: 'none'
+    }
+  },
+
+  '@bp5': {
+    span: {
+      '&:nth-child(3)': {
+        display: 'block'
+      },
+      '&:nth-child(2)': {
+        display: 'none'
       }
     }
   }

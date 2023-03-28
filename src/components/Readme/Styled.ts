@@ -10,7 +10,7 @@ export const ReadmeContainer = styled('main', {
     flexDirection: 'column'
   },
 
-  '@bp2': {
+  '@bp3': {
     gap: '2rem',
     gridTemplateColumns: '1fr'
   }
@@ -46,7 +46,7 @@ export const Profile = styled('section', {
     }
   },
 
-  '@bp2': {
+  '@bp4': {
     span: {
       display: 'none'
     }
@@ -78,18 +78,8 @@ export const Resume = styled('section', {
     lineHeight: '180%'
   },
 
-  '@bp2': {
+  '@bp3': {
     width: 'inherit',
-    gap: '2rem',
-
-    a: {
-      div: {
-        p: {
-          br: {
-            display: 'none'
-          }
-        }
-      }
-    }
+    gap: '2rem'
   }
 })

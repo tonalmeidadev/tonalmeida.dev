@@ -90,7 +90,7 @@ export function KBar({ children }: KBarProps) {
           <KBarContainer>
             <KBarSearchContainer>
               <MagnifyingGlass size={20} />
-              <KBarSearch defaultPlaceholder="Digite um comando ou pesquise" />
+              <KBarSearch defaultPlaceholder="Pesquise ou pressione ESC para sair" />
             </KBarSearchContainer>
             <KBarRender />
           </KBarContainer>

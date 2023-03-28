@@ -12,7 +12,7 @@ export function Address({ localization }: AddressProps) {
       aria-label="Link para acesso a localização no mapa"
       title="Localização em Sacomã, São Paulo"
     >
-      <Compass size={22} />
+      <Compass size={26} />
       <div dangerouslySetInnerHTML={{ __html: localization }} />
     </AddressContainer>
   )

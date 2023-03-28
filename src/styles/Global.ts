@@ -120,13 +120,13 @@ export const globalStyles = globalCss({
     }
   },
 
-  '@bp2': {
+  '@bp3': {
     html: {
       fontSize: '87.5%'
     }
   },
 
-  '@bp3': {
+  '@bp4': {
     'a, button, div': {
       cursor: 'default !important'
     }

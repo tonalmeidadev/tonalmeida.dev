@@ -7,7 +7,7 @@ export const WorkstationContainer = styled('main', {
     marginTop: '8rem'
   },
 
-  '@bp3': {
+  '@bp4': {
     marginTop: '5rem'
   },
 

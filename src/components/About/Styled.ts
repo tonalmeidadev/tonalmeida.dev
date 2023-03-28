@@ -7,7 +7,7 @@ export const AboutContainer = styled('main', {
     marginTop: '8rem'
   },
 
-  '@bp3': {
+  '@bp4': {
     marginTop: '5rem'
   }
 })
@@ -54,7 +54,7 @@ export const Aboutme = styled('section', {
     }
   },
 
-  '@bp2': {
+  '@bp3': {
     gap: '4rem',
     gridTemplateColumns: '1fr',
 
@@ -82,11 +82,27 @@ export const Aboutme = styled('section', {
     aside: {
       img: {
         '&:nth-child(2)': {
-          margin: '0 0 0 -76px'
+          margin: '0 0 0 -86px'
         },
 
         '&:nth-child(3)': {
-          margin: '0 0 0 -76px'
+          margin: '0 0 0 -86px'
+        }
+      }
+    }
+  },
+
+  '@bp5': {
+    aside: {
+      img: {
+        '&:nth-child(2)': {
+          opacity: '0.65',
+          margin: '0 0 0 -130px'
+        },
+
+        '&:nth-child(3)': {
+          margin: '0 0 0 -110px',
+          opacity: '0.5'
         }
       }
     }

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { HeaderContainer, Status } from './Styled'
+import { Contact, HeaderContainer, Status } from './Styled'
 
 export function Header() {
   return (
@@ -23,7 +23,7 @@ export function Header() {
       <ul>
         <li>
           <address>
-            <Link
+            <Contact
               href="https://api.whatsapp.com/send?phone=5511960245642"
               target="_blank"
               aria-label="Link para enviar mensagem no WhatsApp"
@@ -31,7 +31,8 @@ export function Header() {
             >
               <Status />
               <span>Disponível agora</span>
-            </Link>
+              <span>Disponível</span>
+            </Contact>
           </address>
         </li>
       </ul>

@@ -14,7 +14,7 @@ export const KBarPositioner = styled(Positioner, {
   backgroundColor: '#00000055',
   backdropFilter: 'blur(10px)',
 
-  '@bp3': {
+  '@bp4': {
     padding: '0 1rem!important'
   }
 })
@@ -44,7 +44,7 @@ export const KBarSearchContainer = styled('div', {
     position: 'absolute'
   },
 
-  '@bp3': {
+  '@bp4': {
     '> svg': {
       left: '1rem'
     }
@@ -69,7 +69,7 @@ export const KBarSearch = styled(Search, {
     fontFamily: theme.fonts.default
   },
 
-  '@bp3': {
+  '@bp4': {
     padding: '1.5rem 1rem 1.5rem 3rem'
   }
 })
@@ -84,7 +84,7 @@ export const KBarList = styled('div', {
   backdropFilter: 'blur(10px)',
   textTransform: 'uppercase',
 
-  '@bp3': {
+  '@bp4': {
     padding: '1rem'
   }
 })
@@ -97,7 +97,7 @@ export const KBarItemBox = styled('div', {
   alignItems: 'center',
   justifyContent: 'space-between',
 
-  '@bp3': {
+  '@bp4': {
     padding: '1rem'
   },
 
@@ -127,7 +127,7 @@ export const KBarItem = styled('div', {
     lineHeight: '180%'
   },
 
-  '@bp3': {
+  '@bp4': {
     gap: '1rem'
   }
 })

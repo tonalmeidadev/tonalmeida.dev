@@ -38,7 +38,13 @@ export const AddressContainer = styled(Link, {
     }
   },
 
-  '&:hover p': {
-    textDecoration: 'underline'
+  '&:hover': {
+    svg: {
+      animation: 'nome'
+    },
+
+    p: {
+      textDecoration: 'underline'
+    }
   }
 })

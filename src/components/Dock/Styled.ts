@@ -10,7 +10,7 @@ export const DockContainer = styled('div', {
   display: 'flex',
   gap: 10,
 
-  '@bp4': {
+  '@bp5': {
     gap: 0,
     bottom: '1.5rem'
   }
@@ -37,7 +37,7 @@ export const UseKBar = styled('button', {
     }
   },
 
-  '@bp4': {
+  '@bp5': {
     padding: '6px 0 6px 6px',
     borderRadius: '16px 0 0 16px'
   }
@@ -58,7 +58,7 @@ export const Navigation = styled('nav', {
     }
   },
 
-  '@bp4': {
+  '@bp5': {
     ul: {
       borderRadius: '0 16px 16px 0',
 

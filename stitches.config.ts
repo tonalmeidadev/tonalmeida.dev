@@ -26,8 +26,9 @@ export const { getCssText, globalCss, styled, theme } = createStitches({
 
   media: {
     bp1: '(max-width: 1280px)',
-    bp2: '(max-width: 767px)',
-    bp3: '(max-width: 539px)',
-    bp4: '(max-width: 360px)'
+    bp2: '(max-height: 820px)',
+    bp3: '(max-width: 767px)',
+    bp4: '(max-width: 539px)',
+    bp5: '(max-width: 360px)'
   }
 })

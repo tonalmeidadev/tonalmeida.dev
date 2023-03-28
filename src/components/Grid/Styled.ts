@@ -23,11 +23,11 @@ export const GridContainer = styled('div', {
     width: 1
   },
 
-  '@bp3': {
+  '@bp4': {
     padding: '0 2rem'
   },
 
-  '@bp4': {
+  '@bp5': {
     padding: '0 1.5rem'
   },
 
@@ -52,7 +52,7 @@ export const GridContainer = styled('div', {
           height: 'fit-content'
         },
 
-        '@media (max-height: 820px)': {
+        '@bp2': {
           paddingBottom: '8.375rem'
         }
       },
