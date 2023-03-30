@@ -63,7 +63,8 @@ export const Photo = styled('div', {
   border: `6px solid ${theme.colors.gray100}`,
 
   img: {
-    borderRadius: '50%'
+    borderRadius: '50%',
+    userSelect: 'none'
   }
 })
 

@@ -11,7 +11,7 @@ export const KBarPositioner = styled(Positioner, {
   margin: '0 auto',
   padding: '0 4rem!important',
   alignItems: 'center!important',
-  backgroundColor: '#00000055',
+  backgroundColor: theme.colors.grayOpc100,
   backdropFilter: 'blur(10px)',
 
   '@bp4': {
@@ -22,7 +22,7 @@ export const KBarPositioner = styled(Positioner, {
 export const KBarContainer = styled(Animator, {
   width: '100%',
   borderRadius: '1rem',
-  backgroundColor: '#00000055',
+  backgroundColor: theme.colors.grayOpc100,
   backdropFilter: 'blur(10px)',
   border: `2px solid ${theme.colors.gray100}`,
   overflow: 'hidden',
@@ -56,7 +56,7 @@ export const KBarSearch = styled(Search, {
   border: 'none',
   outline: 'none',
   padding: '1.5rem 3rem 1.5rem 5.5rem',
-  backgroundColor: '#00000055',
+  backgroundColor: theme.colors.grayOpc100,
   backdropFilter: 'blur(10px)',
   borderBottom: `2px solid ${theme.colors.gray100}`,
   color: theme.colors.neutral900,
@@ -80,7 +80,7 @@ export const KBarList = styled('div', {
   letterSpacing: 1,
   padding: '1rem 2rem',
   fontFamily: theme.fonts.custom,
-  backgroundColor: '#00000055',
+  backgroundColor: theme.colors.grayOpc100,
   backdropFilter: 'blur(10px)',
   textTransform: 'uppercase',
 
@@ -104,12 +104,12 @@ export const KBarItemBox = styled('div', {
   variants: {
     variant: {
       active: {
-        backgroundColor: '#25252555',
+        backgroundColor: theme.colors.grayOpc500,
         backdropFilter: 'blur(10px)'
       },
 
       inactive: {
-        backgroundColor: '#00000055',
+        backgroundColor: theme.colors.grayOpc100,
         backdropFilter: 'blur(10px)'
       }
     }

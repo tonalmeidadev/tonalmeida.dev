@@ -42,6 +42,7 @@ export const Aboutme = styled('section', {
 
     img: {
       borderRadius: '50%',
+      filter: 'brightness(150%)',
       border: `2px solid ${theme.colors.gray100}`,
 
       '&:nth-child(2)': {

@@ -9,16 +9,8 @@ export const HeaderContainer = styled('header', {
   alignItems: 'center',
   justifyContent: 'space-between',
 
-  '> div': {
-    display: 'flex',
-
-    a: {
-      padding: '2rem 1rem 2rem 0.5rem'
-    }
-  },
-
   ul: {
-    gap: '1.5rem',
+    gap: '0.5rem',
     display: 'flex',
     alignItems: 'center',
 
@@ -30,12 +22,32 @@ export const HeaderContainer = styled('header', {
   }
 })
 
+export const Logo = styled('div', {
+  display: 'flex',
+
+  a: {
+    padding: '2rem 0.5rem'
+  },
+
+  variants: {
+    variant: {
+      light: {
+        filter: 'invert(1)'
+      },
+      dark: {
+        filter: 'invert(0)'
+      }
+    }
+  }
+})
+
 export const Contact = styled(Link, {
+  height: 36,
   gap: '0.5rem',
   display: 'flex',
-  alignItems: 'center',
   borderRadius: 12,
-  padding: '12px 22px',
+  padding: '0 22px',
+  alignItems: 'center',
   backgroundColor: theme.colors.gray100,
   position: 'relative',
 

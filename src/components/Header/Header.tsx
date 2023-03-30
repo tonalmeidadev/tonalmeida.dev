@@ -1,24 +1,38 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { useContext, useEffect, useState } from 'react'
 
-import { Contact, HeaderContainer, Status } from './Styled'
+import { Context } from '../../contexts/context'
+import { Switch } from '../Switch/Switch'
+import { Contact, HeaderContainer, Logo, Status } from './Styled'
 
 export function Header() {
+  const { theme } = useContext(Context)
+  const [clientRender, setClientRender] = useState(false)
+
+  useEffect(() => {
+    setClientRender(true)
+  }, [])
+
   return (
     <HeaderContainer>
-      <div>
-        <Link href="/" title="Ir para a página inicial">
-          <Image
-            src="/assets/logo.webp"
-            alt="Logotipo"
-            title="Logotipo do autor da página"
-            quality={100}
-            height={36}
-            width={32}
-            priority
-          />
-        </Link>
-      </div>
+      {clientRender && (
+        <>
+          <Logo variant={theme === 'light' ? 'light' : 'dark'}>
+            <Link href="/" title="Ir para a página inicial">
+              <Image
+                src="/assets/logo.webp"
+                alt="Logotipo"
+                title="Logotipo do autor da página"
+                quality={100}
+                height={36}
+                width={32}
+                priority
+              />
+            </Link>
+          </Logo>
+        </>
+      )}
 
       <ul>
         <li>
@@ -34,6 +48,9 @@ export function Header() {
               <span>Disponível</span>
             </Contact>
           </address>
+        </li>
+        <li>
+          <Switch />
         </li>
       </ul>
     </HeaderContainer>

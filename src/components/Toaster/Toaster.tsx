@@ -14,11 +14,13 @@ export function Toaster() {
       }}
       toastOptions={{
         style: {
+          height: 36,
           fontSize: 10,
           fontWeight: 400,
           letterSpacing: 1,
-          borderRadius: 16,
-          padding: '6px 14px',
+          borderRadius: 12,
+          boxShadow: 'none',
+          padding: '12px 22px',
           fontFamily: `${theme.fonts.custom}`,
           backgroundColor: `${theme.colors.gray100}`,
           color: `${theme.colors.neutral900}`

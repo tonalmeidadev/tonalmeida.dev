@@ -22,7 +22,7 @@ export const UseKBar = styled('button', {
   display: 'flex',
   borderRadius: 18,
   backdropFilter: 'blur(10px)',
-  backgroundColor: theme.colors.grayOpc,
+  backgroundColor: theme.colors.grayOpc900,
   cursor: 'pointer',
 
   div: {
@@ -50,7 +50,7 @@ export const Navigation = styled('nav', {
     display: 'flex',
     borderRadius: 18,
     backdropFilter: 'blur(10px)',
-    backgroundColor: theme.colors.grayOpc,
+    backgroundColor: theme.colors.grayOpc900,
 
     li: {
       border: 0,
