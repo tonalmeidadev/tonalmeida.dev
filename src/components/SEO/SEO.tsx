@@ -10,9 +10,7 @@ export function SEO({
   titleSufix = false
 }: SEOProps) {
   const url = `https://www.tonalmeida.dev/${path || ''}`
-  const titlePage = `${title}${
-    titleSufix ? ' | Ton Almeida — Front-end & Creative Developer' : ''
-  }`
+  const titlePage = `${title}${titleSufix ? ' | Ton Almeida' : ''}`
 
   return (
     <NextSeo

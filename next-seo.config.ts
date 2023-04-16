@@ -4,7 +4,7 @@ const SEO: DefaultSeoProps = {
   openGraph: {
     type: 'website',
     locale: 'pt-BR',
-    siteName: 'Ton Almeida — Front-end & Creative Developer'
+    siteName: 'Ton Almeida — Creative Front-end Developer'
   },
   twitter: {
     handle: '@handle',
