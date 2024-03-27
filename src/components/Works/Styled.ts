@@ -22,7 +22,7 @@ export const WorksContainer = styled('main', {
 })
 
 export const Cards = styled('section', {
-  gap: '3rem 1rem',
+  gap: '3rem 3rem',
   display: 'grid',
   gridTemplateColumns: '1fr 1fr',
 
