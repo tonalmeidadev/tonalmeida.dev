@@ -60,7 +60,7 @@ export const Photo = styled('div', {
   marginBottom: '1rem',
   width: 'fit-content',
   height: 'fit-content',
-  border: `6px solid ${theme.colors.gray100}`,
+  border: `3px solid ${theme.colors.gray100}`,
 
   img: {
     borderRadius: '50%',
