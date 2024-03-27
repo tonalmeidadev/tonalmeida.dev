@@ -2,7 +2,7 @@ import { styled, theme } from '../../../stitches.config'
 
 export const GridContainer = styled('div', {
   width: '100%',
-  maxWidth: 832,
+  maxWidth: 900,
   minHeight: '100vh',
   padding: '0 4rem',
   margin: '0 auto',
