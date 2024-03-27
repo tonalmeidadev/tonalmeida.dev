@@ -119,7 +119,11 @@ export const Biography = styled('div', {
   p: {
     fontSize: 14,
     fontWeight: 200,
-    lineHeight: '180%'
+    lineHeight: '180%',
+
+    a: {
+      textDecoration: 'underline'
+    }
   }
 })
 
